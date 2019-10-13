@@ -1,0 +1,106 @@
+<html>
+<style>
+body
+{
+background-image:url("logo3.png");
+background-repeat:no-repeat;
+background-size :100% 100%;
+text-align:center;
+border:100px;
+}
+
+#pid
+{
+background-image:url("logo1.png");
+background-repeat:no-repeat;
+background-size :100% 100%;
+}
+#button
+{
+color:cyan;
+background-color:black;
+cursor:pointer;
+}
+h1
+{
+font-size:50px;
+}
+u
+{
+color:cyan;
+font-size:30;
+}
+#marquee
+{
+color:cyan;
+}
+
+</style>
+<script>
+var mobno,pass,temp1=0,temp2=0;
+function fun1()
+{
+var mobno=document.f1.t1.value;
+if(mobno.length==10 && !isNaN(mobno))
+{
+temp1=1;
+}
+else
+{
+temp1=0;
+}
+return temp1;
+}
+function fun2()
+{
+var pass=document.f1.t2.value;
+if(pass.length>=6)
+{
+temp2=1;
+}
+else
+{
+temp2=0;
+}
+return temp2;
+}
+function fun()
+{
+var mobno=document.f1.t1.value;
+var pass=document.f1.t2.value;
+if(mobno.length !=10)
+{
+alert("enter valid mobile number ");
+return false;
+}
+else if(pass.length<6)
+{
+alert("enter strong password ");
+return false;
+}
+else
+{
+return true;
+}
+}
+</script>
+<body>
+<form name="f1" method="post" action="http://localhost:8080/5B1/Log1" onsubmit="return fun()">
+<marquee id =marquee><h1>WELCOME TO BRUNCH & MUNCH</h1></marquee></br>
+<h2 align=center><b><u>LOGIN FORM</b></u>
+<table border=5  id=pid align="center"cellpadding=10 bordercolor=cyan>
+<tr>
+<td>
+<b style="color:blue">moblie number:<input type="text" name="t1"  placeholder="exactly ten-digit number"></br></br></br>
+<b>password &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp:<input type="password" name="t2" placeholder="atleast six-charecters"></br></br></br>
+<b><a href="mobno.html">forgot password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</b><input type="submit" onclick="fun()" value="Submit Details" id=button></b></br></br>
+</table>
+</td> 
+</tr>
+</form>
+</body>
+</html>
+
+
+

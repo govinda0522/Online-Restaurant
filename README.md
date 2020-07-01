@@ -1,2 +1,2 @@
 # Online-Restaurant
-model :Mysql view:tml,css &amp; javascript Controller:Servlets
+model :Mysql view:Html,css &amp; javascript Controller:Servlets

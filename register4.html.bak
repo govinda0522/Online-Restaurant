@@ -1,0 +1,149 @@
+<html>
+<style>
+body
+{
+background-image:url("logo6.png");
+background-repeat:no-repeat;
+background-size:100% 100%;
+text-align:center;
+margin-down:100;
+border:100px;
+padding:20;
+}
+#pid1
+{
+color:cyan;
+font-size:50px;
+}
+table
+{
+border:5px solid cyan;
+padding:50;
+background-image:url("logo1.png");
+background-repeat:no-repeat;
+background-size:100% 100%;
+}#button
+{
+color:cyan;
+background-color:black;
+width:80;
+height:30;
+font-size:20;
+cursor:pointer;
+}
+#head
+{
+color:cyan;
+font-size:35;
+}
+h1
+{
+color:blue;
+}
+
+</style>
+<script>
+var name,pass,mail,mobno,temp1,temp2,temp3,temp4,flag;
+function fun1()
+{
+var name=document.f1.t1.value;
+if(name.length>=6 && isNaN(name))
+{
+temp1=1;
+}
+else
+{
+temp1=0;
+}
+}
+function fun2()
+{
+if(pass.length>=6)
+{
+temp2=1;
+}
+else
+{
+temp2=0;
+}
+}
+
+function fun4()
+{
+var mobno=document.f1.t4.value;
+if(mobno.length==10 && !isNaN(mobno))
+{
+temp4=1;
+}
+else
+{
+temp4=0;
+}
+}
+function fun()
+{
+var name=document.f1.t1.value;
+var pass=document.f1.t2.value;
+var mobno=document.f1.t4.value;
+if(name.length<6 || !isNaN(name))
+{
+alert("invalid username  "+name);
+return false;
+}
+else if(pass.length<6)
+{
+alert("enter strong password");
+return false;
+}
+else if(isNaN(mobno) || mobno.length !=10)
+{
+alert("invalid mobilenumber  "+mobno);
+return false;
+}
+else
+{
+return true;
+}
+}
+</script>
+<body id=pid>
+<form name="f1" method="POST" action="http://localhost:8080/Online-Restaurant/Reg1" onsubmit="return fun()">
+<h1 id=head><u>Invalid Moblie No or PassWord REGISTRATION FORM</u></h1>
+<table align="center">
+<tr>
+<td>
+<h1>enter name:</h1>
+</td>
+<td>
+<input type="text" name="t1" onblur="fun1()" placeholder="atleast 6 cahrecters"><p id="pid1"></p>
+</td>
+</tr>
+<tr>
+<td>
+<h1>enter password:</h1>
+</td>
+<td>
+<input type="password" name="t2" onblur="fun2()" placeholder="atleast 6 cahrecters"><p id="pid2"></p>
+</td>
+</tr>
+<tr>
+<td>
+<h1>enter email:</h1>
+</td>
+<td>
+<input type="email" name="t3" onblur="fun3()"placeholder="enter email"></h1><p id="pid3"></p>
+</td>
+</tr>
+<tr>
+<td>
+<h1>enter mobile no:</h1>
+</td>
+<td>
+<input type="text"  name="t4" onblur="fun4()" placeholder="exactly 10 digit number"></h1><p id="pid4"></p>
+</td></tr>
+<tr><td>
+<input type="submit" value="submit" id="button">
+</td></tr>
+</table>
+</body>
+</html>

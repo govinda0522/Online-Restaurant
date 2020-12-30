@@ -1,0 +1,70 @@
+<html>
+<style>
+body
+{
+background-image:url("logo3.png");
+background-repeat:no-repeat;
+background-size:100% 100%;
+margin-top:150;
+}
+.button
+{
+color:cyan;
+background-color:black;
+text-align:center;
+cursor:pointer;
+font-size:15;
+}
+.text
+{
+padding:6;
+}
+#main
+{
+color:cyan;
+background-color:black;
+text-align:center;
+height:50;
+}
+#pid
+{
+text-align:center;
+color:cyan;
+font-size:50;
+}
+</style>
+<script>
+s='';
+function fun()
+{
+var a=new Array('0','1','2','3','4','5','6','7','8','9');
+var a1=a[Math.floor(Math.random()*10)];
+var a2=a[Math.floor(Math.random()*10)];
+var a3=a[Math.floor(Math.random()*10)];
+var a4=a[Math.floor(Math.random()*10)];
+var a5=a[Math.floor(Math.random()*10)];
+var a6=a[Math.floor(Math.random()*10)];
+s=a1+a2+a3+a4+a5+a6;
+document.f1.t1.value=s;
+}
+function fun1()
+{
+var t=document.f1.t2.value;
+if(t==s)
+{
+window.open("forgot.html");
+}
+else
+document.getElementById("pid").innerHTML="INVALID OTP";
+}
+</script>
+<body onload="fun()" name="captcha">
+<form name="f1">
+<h1 id="pid"><b>HERE IS THE OTP</b></h1>
+<p style="text-align:center;"><input type=text class="text" name=t1>
+<input type=button class=button value="Refresh" onclick="fun()">
+<p style="text-align:center;"> <input type="text" class="text" name="t2">
+<input type=button class=button value=validate onclick="fun1()" placeholder="enter OTP">
+</body>
+</html>
+

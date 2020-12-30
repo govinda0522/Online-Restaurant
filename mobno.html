@@ -1,0 +1,79 @@
+<html>
+<style>
+body
+{
+background-image:url("logo4.png");
+background-repeat:no-repeat;
+background-size :100% 100%;
+text-align:center;
+border:100px;
+}
+#pid
+{
+background-image:url("logon.png");
+}
+#pid2
+{
+padding:15;
+}
+#button
+{
+color:cyan;
+background-color:black;
+cursor:pointer;
+font-size:30;
+}
+h1
+{
+font-size:50px;
+}
+u
+{
+color:cyan;
+font-size:30;
+}
+#marquee
+{
+color:cyan;
+}
+
+</style>
+<script>
+var mobno,temp1;
+function fun1()
+{
+var mobno=document.f1.t1.value;
+if(mobno.length==10 && !isNaN(mobno))
+{
+temp1=1;
+}
+else
+{
+temp1=0;
+}
+return temp1;
+}
+function fun()
+{
+if(fun1()==1)
+{
+window.open("captcha.html");
+}
+else
+{
+alert("enter valid mobile number");
+}
+}
+</script>
+<body>
+<form name="f1">
+<h1 style="color:cyan;">CLICK SUBMIT TO GET AN OTP</h1>
+<h1 style="color:cyan;">ENTER MOBILE NUMBER:</h1>
+<input type="text" name="t1"  placeholder="exactly ten-digit number" id="pid2"></br></br></br>
+</b><input type="button" onclick="fun()" value="Submit" id=button></b></br></br>
+</form>
+</body>
+</html>
+
+
+

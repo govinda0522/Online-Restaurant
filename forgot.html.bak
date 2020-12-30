@@ -1,0 +1,68 @@
+<html>
+<style>
+body
+{
+background-image:url("logo1.png");
+background-repeat:no-repeat;
+background-size:100% 100%;
+margin:180;
+}
+#table
+{
+background-image:url("logo1.png");
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+.button
+{
+color:cyan;
+background-color:black;
+cursor:pointer;
+}
+.b
+{
+color:blue;
+}
+
+u
+{
+color:cyan;
+font-size:30;
+}
+</style>
+<script>
+function fun()
+{
+var mobno=document.f1.t1.value;
+var pass1=document.f1.t2.value;
+var pass2=document.f1.t3.value;
+if(mobno.length==10 && (pass1==pass2))
+{
+return true;
+}
+else
+{
+alert("enter valid password ");
+return false;
+}
+}
+</script>
+<body>
+<form name="f1" action="http://localhost:8080/5B1/Cp" method="POST" onsubmit="return fun()">
+<h2 align=center><u>FORGOT PASSWORD</u></h2>
+<table border=3 id=table align="center"cellpadding=10 bordercolor=cyan >
+<tr>
+<td>
+<b class=b>ENTER MOBILE .NO&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp:<input type="text" name="t1" placeholder="enter mobile Number"></b></br></br></br>
+<b class=b>ENTER PASSWORD &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp:<input type="password" name="t2" placeholder="atleast eight charecters"></b></br></br></br>
+<b class=b>RE-ENTER PASSWORD &nbsp;&nbsp;:<input type="password" name="t3" placeholder="atleast eight charecters"></b></br></br></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="submit"  class=button onclick="fun()" value="Submit"></b></br></br>
+</table>
+</td> 
+</tr>
+</form>
+</body>
+</html>
+
+
+
